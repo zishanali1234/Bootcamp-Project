@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="Homepage - Activity Feed.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script src="https://use.fontawesome.com/2649ac17d9.js"></script>
   </head>
   <body>
     <div id="mySidebar" class="sidebar">
-      <a href="Homepage - Activity Feed .html"><button style="width: 100%; height: 60px;"><font face="Century Gothic">Home</font></button></a>
+      <button style="background-color: #0B0B61; width: 100%"><font face="Helvetica" color="#FFFFFF"><b>SKY SPORTS VOD &nbsp</b><i style="background-color: #0B0B61" onclick="closeNav()" class="fa fa-times" aria-hidden="true"></i></button></font>
+      <a href="Homepage - Activity Feed .html"><button><font face="Helvetica"><b>HOME</b></font></button></a>
       <br>
-      <a href="profilePageDifferentCSS.html"><button style="width: 100%; height: 60px;"><font face="Century Gothic">My Profile</font></button></a>
+      <a href="profilePageDifferentCSS.html"><button><font face="Helvetica"><b>MY PROFILE</b></font></button></a>
       <br>
-      <a href="#"><button style="width: 100%; height: 30px; position: absolute; bottom: 10%"><font face="Century Gothic">Log Out</font></button></a>
+      <a href="#"><button style="position: absolute; bottom: 0%"><font face="Helvetica"><b>LOG OUT</b></font></button></a>
     </div>
     <div id="main">
     <div class="container-fluid">
-      <span style="font-size: 25px; cursor: pointer; position: relative; top: 60px;" onclick="openNav()"><font color="#FFFFFF">&#9776;</font></span><div onclick="closeNav()"><div class="row" align="center"><h1><b><font color="#FFFFFF" face="Century Gothic">Sky Sports VOD</font></b></h1></div>
+      <span style="font-size: 25px; cursor: pointer; position: relative; top: 60px;" onclick="openNav()"><font color="#FFFFFF">&#9776;</font></span><div onclick="closeNav()"><div class="row" align="center"><h1><b><font color="#FFFFFF" face="Helvetica">Sky Sports VOD</font></b></h1></div>
 
-      <div class="row"><input id="searchBar" Type="text" name="Search for content here" placeholder="Search here."></input></div>
+      <div id="searchRow" class="row"><input id="searchBar" Type="text" name="Search for content here" placeholder="Search here."></input></div>
       <div id="createRow" class="row">
         <div id="allPreferances">
           <br>
@@ -106,7 +107,7 @@
         </div>
       </div>
       <div class="container-fluid" id="feed">
-    <h1><font color="#FFFFFF" face="Century Gothic"><b>Your Activity Feed</b></font></h1>
+    <h1><font color="#FFFFFF" face="Helvetica"><b>Your Activity Feed</b></font></h1>
     <div class="row">
       <img id="bigVideo" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" src="" onmousedown="toggleOverlay(12)">
       <img id="smallVid1" class="col-xs-6 col-sm-6 col-md-3 col-lg-3" src="" onmousedown="toggleOverlay(13)">
@@ -118,7 +119,7 @@
   </div>
 
       <div id="popularVideos" class="container-fluid">
-        <h3><font color="#FFFFFF" face="Century Gothic">Popular Videos</font></h3>
+        <h3><font color="#FFFFFF" face="Helvetica">Popular Videos  <i class="fa fa-fire" aria-hidden="true"></i></font></h3>
         <div align="center" class="row">
           <div id="topPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
               <img src="https://i.ytimg.com/vi/s2TkckcETvQ/hqdefault.jpg?custom=true&amp;w=336&amp;h=188&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=ReTuKhMOUyrhi14AB4RZHwc4Z_4" onmousedown="toggleOverlay(0)" width="100%">
@@ -130,7 +131,7 @@
               <img src="https://i.ytimg.com/vi/9-gOCOu_KGU/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=DEbXkmC-w9_9NBVpUJExiZRSkQg" onmousedown="toggleOverlay(2)" width="100%">
           </div>
           </div>
-        <h3><font color="#FFFFFF" face="Century Gothic">Trending</font></h3>
+        <h3><font color="#FFFFFF" face="Helvetica">Trending  <i class="fa fa-line-chart" aria-hidden="true"></i></font></h3>
         <div align="center" class="row">
         <div id="middleTopPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
           <img src="https://i.ytimg.com/vi/7nF0STpUEzs/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=uENj2LeJpE_eFRLj40yTBmtnvko" onmousedown="toggleOverlay(3)" width="100%">
@@ -142,7 +143,7 @@
             <img src="https://i.ytimg.com/vi/iMbwSnxhDOc/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=OHy-gss206EmydGsR9XiSA7OK0s " onmousedown="toggleOverlay(5)" width="100%">
           </div>
         </div>
-        <h3><font color="#FFFFFF" face="Century Gothic">Football</font></h3>
+        <h3><font color="#FFFFFF" face="Helvetica">Football  <i class="fa fa-futbol-o" aria-hidden="true"></i></font></h3>
           <div align="center" class="row">
             <div id="middleBottomPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                   <img src="https://i.ytimg.com/vi/2XMUSogvylw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_hYM_wESQqduLAFPuR3kKuy0YwE" onmousedown="toggleOverlay(6)" width="100%">
@@ -154,7 +155,7 @@
                 <img src="https://i.ytimg.com/vi/3SmICSxMfj0/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3nvFCAq-Qu7VHG2ilKvQnU9Yw-w" onmousedown="toggleOverlay(8)" width="100%">
             </div>
           </div>
-        <h3><font color="#FFFFFF" face="Century Gothic">Boxing</font></h3>
+        <h3><font color="#FFFFFF" face="Helvetica">Boxing  <i class="fa fa-hand-rock-o" aria-hidden="true"></i></font></h3>
         <div align="center" class="row">
           <div id="bottomPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
               <img src="https://i.ytimg.com/vi/_dnzFi_vmcw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y9QK71UPWtj9qOAnT-dAqSqLqvo" onmousedown="toggleOverlay(9)" width="100%">
@@ -174,7 +175,7 @@
  <iframe width="460px" height="315px" src="https://www.youtube.com/embed/s2TkckcETvQ" frameborder="0" allowfullscreen></iframe>
 </div>
  <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
- <div class="first"><button onclick="styleWork();"id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+ <div class="first"><button onclick="styleWork();"id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
  <form class="container" id="comments0" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
  </form>
  <button id="writeComment" onclick="myComment(0)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -185,7 +186,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/S-RIbKiEjVg" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments1" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(1)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -196,7 +197,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/9-gOCOu_KGU" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments2" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(2)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -207,7 +208,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/tKi29fb_c9A" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments3" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(3)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -218,7 +219,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/aUDLB4TCGbE" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments4" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(4)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -229,7 +230,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/iMbwSnxhDOc" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments5" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(5)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -240,7 +241,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/2XMUSogvylw" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments6" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(6)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -251,7 +252,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/EMdnJsytgow" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments7" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(7)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -262,7 +263,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/KUe61Uu-7A8" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments8" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(8)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -273,7 +274,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/_dnzFi_vmcw" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments9" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(9)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -284,7 +285,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/llnk5030XIY" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments10" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(10)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -295,7 +296,7 @@
  <iframe width="460" height="315" src="https://www.youtube.com/embed/-AqvVQxr_e8" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments11" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(11)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -306,7 +307,7 @@
  <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments12" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(12)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -317,7 +318,7 @@
  <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments13" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(13)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -328,7 +329,7 @@
  <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments14" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(14)"><font><p><b>WRITE A COMMENT</b></p></font></button>
@@ -339,7 +340,7 @@
  <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
-<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments15" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(15)"><font><p><b>WRITE A COMMENT</b></p></font></button>
