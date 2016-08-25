@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Homepage - Activity Feed.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="Homepage - Activity Feed .html"><button style="width: 100%; height: 60px;"><font face="Century Gothic">Home</font></button></a>
+      <br>
+      <a href="profilePageDifferentCSS.html"><button style="width: 100%; height: 60px;"><font face="Century Gothic">My Profile</font></button></a>
+      <br>
+      <a href="#"><button style="width: 100%; height: 30px; position: absolute; bottom: 10%"><font face="Century Gothic">Log Out</font></button></a>
+    </div>
+    <div id="main">
+    <div class="container-fluid">
+      <span style="font-size: 25px; cursor: pointer; position: relative; top: 60px;" onclick="openNav()"><font color="#FFFFFF">&#9776;</font></span><div onclick="closeNav()"><div class="row" align="center"><h1><b><font color="#FFFFFF" face="Century Gothic">Sky Sports VOD</font></b></h1></div>
+
+      <div class="row"><input id="searchBar" Type="text" name="Search for content here" placeholder="Search here."></input></div>
+      <div id="createRow" class="row">
+        <div id="allPreferances">
+          <br>
+          <div align="center" class="row">
+          <input id="sport" list="sports" type = "text" placeholder="Choose a sport"></input>
+          <datalist id="sports">
+            <option value="Football"></option>
+            <option value="F1"></option>
+            <option value="Boxing"></option>
+            <option value="Tennis"></option>
+            <option value="Cycling"></option>
+            <option value="Olympics"></option>
+          </datalist>
+
+          <input id="teamstext" list="teams" type = "text" style="display: none; width: 70%" placeholder="Choose a team"></input>
+          <datalist id ="teams">
+            <option value="Manchester City"></option>
+            <option value="Manchester United"></option>
+            <option value="Chelsea"></option>
+            <option value="Arsenal"></option>
+            <option value="Crystal Palace"></option>
+            <option value="All"></option>
+          </datalist>
+
+
+          <input id="F1people" list="people" type = "text" placeholder="Choose a Driver"></input>
+          <datalist id ="people">
+            <option value="Lewis Hamilton"></option>
+            <option value="Nico Rosberg"></option>
+            <option value="Sebastian Vetel"></option>
+            <option value="Jenson Button"></option>
+            <option value="All"></option>
+          </datalist>
+        </div>
+        <div align="center" class="row">
+
+          <input id="Boxers" list="Boxerslst" type = "text" placeholder="Choose a boxer"></input>
+          <datalist id ="Boxerslst">
+            <option value="Andre Ward"></option>
+            <option value="Tyson Fury"></option>
+            <option value="All"></option>
+          </datalist>
+        </div>
+          <div align="center" class="row">
+          <input id="tennisPlayers" list="tennisPlayerslst" type = "text" placeholder="Choose a tennis player"></input>
+          <datalist id ="tennisPlayerslst">
+            <option value="Andy Murray"></option>
+            <option value="Roger Federer"></option>
+            <option value="Novak Dokovic"></option>
+            <option value="Serena Williams"></option>
+            <option value="All"></option>
+          </datalist>
+
+          <input id="cyclists" list="cyclistslst" type = "text" placeholder="Choose a cyclist"></input>
+          <datalist id ="cyclistslst">
+            <option value="Bradley Wiggins"></option>
+            <option value="Mark Cavandish"></option>
+            <option value="Jason Kenney"></option>
+            <option value="Laura Trott"></option>
+            <option value="Johanna Rowsell"></option>
+            <option value="All"></option>
+          </datalist>
+
+          <input id="nationalities" list="nationalitieslst" type = "text"placeholder="Choose a nation"></input>
+          <datalist id ="nationalitieslst">
+            <option value="Great Britain"></option>
+            <option value="China"></option>
+            <option value="USA"></option>
+            <option value="Japan"></option>
+            <option value="All"></option>
+          </datalist>
+        </div>
+
+        <div align="center" style="margin-top: 2px">
+          <input type="button" id="enterPreferances" onclick="boxesDissapear(); chosenPreferances(); switchButtons();" value="Click here"></input></div>
+        <div align="center">
+
+        <div align="center">
+          <br>
+<input type="button" id="enterSubsport" class="feedButton" onclick="subSportChosen();" value="Enter"></input></div>
+        </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="feed">
+    <h1><font color="#FFFFFF" face="Century Gothic"><b>Your Activity Feed</b></font></h1>
+    <div class="row">
+      <img id="bigVideo" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" src="" onmousedown="toggleOverlay(12)">
+      <img id="smallVid1" class="col-xs-6 col-sm-6 col-md-3 col-lg-3" src="" onmousedown="toggleOverlay(13)">
+      <img id="smallVid2" class="col-xs-6 col-sm-6 col-md-3 col-lg-3" src="" onmousedown="toggleOverlay(14)">
+    </div>
+    <div class="row">
+      <img id="longVid" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" src="" onmousedown="toggleOverlay(15)">
+    </div>
+  </div>
+
+      <div id="popularVideos" class="container-fluid">
+        <h3><font color="#FFFFFF" face="Century Gothic">Popular Videos</font></h3>
+        <div align="center" class="row">
+          <div id="topPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <img src="https://i.ytimg.com/vi/s2TkckcETvQ/hqdefault.jpg?custom=true&amp;w=336&amp;h=188&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=ReTuKhMOUyrhi14AB4RZHwc4Z_4" onmousedown="toggleOverlay(0)" width="100%">
+          </div>
+          <div id="topPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <img src="https://i.ytimg.com/vi/adAUD_WRjfw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=dEJz1tx8f5KKWZR5MEBKkKFQ848" onmousedown="toggleOverlay(1)" width="100%">
+          </div>
+          <div id="topPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <img src="https://i.ytimg.com/vi/9-gOCOu_KGU/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=DEbXkmC-w9_9NBVpUJExiZRSkQg" onmousedown="toggleOverlay(2)" width="100%">
+          </div>
+          </div>
+        <h3><font color="#FFFFFF" face="Century Gothic">Trending</font></h3>
+        <div align="center" class="row">
+        <div id="middleTopPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+          <img src="https://i.ytimg.com/vi/7nF0STpUEzs/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=uENj2LeJpE_eFRLj40yTBmtnvko" onmousedown="toggleOverlay(3)" width="100%">
+        </div>
+          <div id="middleTopPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <img src="https://i.ytimg.com/vi/e3z4qrlQTZQ/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=brWwkg-WvAPEiKLlQEiIcixL3Jk" onmousedown="toggleOverlay(4)" width="100%">
+          </div>
+          <div id="middleTopPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+            <img src="https://i.ytimg.com/vi/iMbwSnxhDOc/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=OHy-gss206EmydGsR9XiSA7OK0s " onmousedown="toggleOverlay(5)" width="100%">
+          </div>
+        </div>
+        <h3><font color="#FFFFFF" face="Century Gothic">Football</font></h3>
+          <div align="center" class="row">
+            <div id="middleBottomPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                  <img src="https://i.ytimg.com/vi/2XMUSogvylw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_hYM_wESQqduLAFPuR3kKuy0YwE" onmousedown="toggleOverlay(6)" width="100%">
+            </div>
+            <div id="middleBottomPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <img src="http://e1.365dm.com/15/10/768x432/joe-hart-david-de-gea-manchester-city-manchester-united-premier-league_3368626.jpg?20151025171545" onmousedown="toggleOverlay(7)" width="100%" height="auto">
+            </div>
+            <div id="middleBottomPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <img src="https://i.ytimg.com/vi/3SmICSxMfj0/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3nvFCAq-Qu7VHG2ilKvQnU9Yw-w" onmousedown="toggleOverlay(8)" width="100%">
+            </div>
+          </div>
+        <h3><font color="#FFFFFF" face="Century Gothic">Boxing</font></h3>
+        <div align="center" class="row">
+          <div id="bottomPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <img src="https://i.ytimg.com/vi/_dnzFi_vmcw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y9QK71UPWtj9qOAnT-dAqSqLqvo" onmousedown="toggleOverlay(9)" width="100%">
+          </div>
+          <div id="bottomPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <img src="https://i.ytimg.com/vi/llnk5030XIY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=0tnp1mVMsuVNtnfmSllDjzeZt_A" onmousedown="toggleOverlay(10)" width="100%">
+          </div>
+          <div id="bottomPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+              <img src="https://i.ytimg.com/vi/LqO72oUnCks/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=vihDYADMwPh-MNx1lOL8fg0YzbQ" onmousedown="toggleOverlay(11)" width="100%">
+          </div>
+        </div>
+      </div>
+      <div id="overlay" onmousedown="toggleOverlay()"></div>
+
+<div id="videoBox0" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460px" height="315px" src="https://www.youtube.com/embed/s2TkckcETvQ" frameborder="0" allowfullscreen></iframe>
+</div>
+ <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+ <div class="first"><button onclick="styleWork();"id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+ <form class="container" id="comments0" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+ </form>
+ <button id="writeComment" onclick="myComment(0)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox1" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/S-RIbKiEjVg" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments1" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(1)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox2" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/9-gOCOu_KGU" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments2" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(2)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox3" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/tKi29fb_c9A" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments3" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(3)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox4" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/aUDLB4TCGbE" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments4" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(4)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox5" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/iMbwSnxhDOc" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments5" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(5)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox6" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/2XMUSogvylw" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments6" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(6)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox7" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/EMdnJsytgow" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments7" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(7)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox8" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/KUe61Uu-7A8" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments8" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(8)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox9" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/_dnzFi_vmcw" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments9" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(9)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox10" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/llnk5030XIY" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments10" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(10)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox11" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="https://www.youtube.com/embed/-AqvVQxr_e8" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments11" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(11)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox12" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments12" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(12)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox13" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments13" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(13)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox14" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments14" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(14)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+<div id="videoBox15" style="margin-right: 20px; padding-left: 60px">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe width="460" height="315" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
+<div class="first"><button id="commentExpand"><font color="#0000e6"><p><b>COMMENTS</b></p></font></button></div>
+<form class="container" id="comments15" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
+</form>
+<button id="writeComment" onclick="myComment(15)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+</div>
+</div>
+
+</div>
+      </div>
+
+
+<script src="Homepage - Activity Feed .js"></script>
+  </body>
+</html>

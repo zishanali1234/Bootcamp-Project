@@ -1,0 +1,231 @@
+#feed {
+  display:none;
+}
+
+body {
+   height: auto;
+   margin: 0 auto;
+    background-repeat: no-repeat;
+    background: blue;
+    background: -webkit-linear-gradient(top right, darkblue, blue, darkblue);
+    background: -o-linear-gradient(bottom right, darkblue, blue, darkblue);
+    background: -moz-linear-gradient(bottom right, darkblue, blue, darkblue);
+    background: linear-gradient(to bottom right, darkblue, blue, darkblue);
+    font-family: "Century Gothic", sans-serif;
+}
+
+.container-fluid {
+width: 100%;
+margin: 0 auto;
+max-width: 1000px;
+margin: 0 auto;
+height: 700px;
+}
+
+.feedButton {
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+img {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          }
+
+img::after {
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 102%;
+  height: 102%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 6);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          }
+
+img:hover {
+  -webkit-transform: scale(1.02, 1.02);
+  transform: scale(1.02, 1.02);
+  opacity: 5;
+  box-shadow: 0 13px 25px rgba(0, 0, 0, 10);
+  z-index: 100;
+          }
+
+img:hover::after {
+  opacity: 5;
+  box-shadow: 0 13px 25px rgba(0, 0, 0, 10);
+  z-index
+}
+
+#searchBar {
+  padding: 8px;
+  width: 100%;
+  font-color: #FF0000;
+  border-radius: 7px;
+}
+
+#createRow {
+  margin-top: 10px;
+  padding: 8px;
+}
+
+#allPreferances {
+  background-color: #F1F2F3;
+  height: 200px;
+  border-radius: 7px;
+}
+
+#sport {
+  width: 70%;
+}
+
+#teamstext, #F1people, #rugbyTeams, #golfPlayers, #Boxers, #tennisPlayers, #cyclists, #netballTeam, #nationalities{
+  display: none;
+  width: 70%;
+}
+
+#enterPreferances{
+  display: block;
+  width: 50%;
+}
+
+#enterSubsport {
+  display: none;
+  width: 50%;
+}
+
+.feedButton {
+  width: 50%;
+}
+
+#bigVideo {
+  background-color: yellow;
+  height: 403px;
+  margin-right: 3px;
+}
+
+#smallVid1 {
+  background-color: pink;
+  min-width: 33%;
+  height: 200px;
+  margin-bottom: 3px;
+}
+
+#smallVid2 {
+  background-color: red;
+  min-width: 33%;
+  height: 200px;
+}
+
+#longVid {
+  height: 297px;
+  background-color: white;
+  margin-top: 3px;
+}
+
+#popularVideos {
+  width: 100%;
+  height: auto;
+}
+
+#topPopular1, #topPopular2, #topPopular3, #middleTopPopular1, #middleTopPopular2, #middleTopPopular3, #middleBottomPopular1, #middleBottomPopular2, #middleBottomPopular3, #bottomPopular1, #bottomPopular2, #bottomPopular3 {
+  margin: 5px 0;
+
+}
+
+
+
+#wrapper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding-left:24px;
+}
+
+/* Side bar CSS here */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: .7s;
+    padding-top: 60px;
+}
+
+
+.sidebar .closenav {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .7s;
+    padding: 16px;
+}
+
+#overlay {
+    display: none;
+    z-index: 2;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+
+#videoBox0, #videoBox1, #videoBox2, #videoBox3, #videoBox4, #videoBox5, #videoBox6, #videoBox7, #videoBox8, #videoBox9, #videoBox10, #videoBox11, #videoBox12, #videoBox13, #videoBox14, #videoBox15 {
+ display: none;
+ height: auto;
+ width: 1000px;
+ position: fixed;
+ top: 45%;
+ left: 29%;
+ right: 29%;
+ margin-top: -100px;
+ margin-left: -230px;
+ z-index: 9999;
+ margin-right: 50px;
+}
+
+/* Comments section CSS */
+.container {
+  display: none;
+   width:100%;
+   height:100%;
+   background-color:#0080FF ;
+   font-size:13px;
+   padding: 20px;
+ }
+
+
+ #commentExpand {
+   padding-top:10px;
+   padding-bottom:0px;
+   font-size:10px;
+   width: 100%;
+ }
+ #writeComment {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top:10px;
+  padding-bottom:0px;
+  font-size:10px;
+ }
+
+ #commentsbig {
+
+  padding-left: 20px;
+  padding-right: 20px;
+ }
