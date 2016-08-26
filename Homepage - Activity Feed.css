@@ -3,16 +3,14 @@
 }
 
 body {
-    height: auto;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background: blue;
-    background: -webkit-linear-gradient(top, #0B0B61, #2E64FE);
-    background: -o-linear-gradient(bottom, #0B0B61, #2E64FE);
-    background: -moz-linear-gradient(bottom, #0B0B61, #2E64FE);
-    background: linear-gradient(to bottom, #0B0B61, #2E64FE);
-    font-family: "Helvetica", sans-serif;
-    background-size: 5000px;
+  height: auto;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(top, #0B0B61, #2E64FE);
+  background: -o-linear-gradient(bottom, #0B0B61, #2E64FE);
+  background: -moz-linear-gradient(bottom, #0B0B61, #2E64FE);
+  background: linear-gradient(to bottom, #0B0B61, #2E64FE);
+  font-family: "Helvetica", sans-serif;
 }
 
 .container-fluid {

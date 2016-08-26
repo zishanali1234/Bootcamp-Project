@@ -7,28 +7,29 @@
   <link rel="stylesheet" href="profilePage.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script src="https://use.fontawesome.com/2649ac17d9.js"></script>
 </head>
 
 <body onload="changeImage()">
   <div id="mySidebar" class="sidebar">
-    <a href="Homepage - Activity Feed .html"><button style="width: 100%; height: 60px;"><font face="Century Gothic">Home</font></button></a>
+    <button style="background-color: #0B0B61; width: 100%"><font face="Helvetica" color="#FFFFFF"><b>SKY SPORTS VOD &nbsp</b><i style="background-color: #0B0B61" onclick="closeNav()" class="fa fa-times" aria-hidden="true"></i></button></font>
+    <a href="Homepage - Activity Feed .html"><button style="width: 100%; height: 60px;"><font face="Helvetica">Home</font></button></a>
     <br>
-    <a href="profilePageDifferentCSS.html"><button style="width: 100%; height: 60px;"><font face="Century Gothic">My Profile</font></button></a>
+    <a href="profilePageDifferentCSS.html"><button style="width: 100%; height: 60px;"><font face="Helvetica">My Profile</font></button></a>
     <br>
-    <a href="#"><button style="width: 100%; height: 30px; position: absolute; bottom: 10%"><font face="Century Gothic">Log Out</font></button></a>
+    <a href="#"><button style="width: 100%; height: 30px; position: absolute; bottom: 0%"><font face="Helvetica">Log Out</font></button></a>
   </div>
 <div id="main">
 <div class="container-fluid">
-    <span style="font-size: 25px; cursor: pointer; position: relative; top: 50px;" onclick="openNav()">&#9776;</span><div onclick="closeNav()"><h1 class="text-center">My Profile</h1>
+    <span style="font-size: 25px; cursor: pointer; position: relative; top: 50px;" onclick="openNav()">&#9776;</span><div onclick="closeNav()"><h1 class="text-center"><b>My Profile</b></h1>
     <br>
   <div class="row">
 <div class="container-fluid">
-  <h3 id="nameEdit">Edit Name   <img id="nameEditPic" onclick="changeheading();" src="http://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon--4.png" width= "15px"; height= "auto";>
+  <h3 id="nameEdit">Edit Name   <img id="nameEditPic" onclick="changeheading();" src="http://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon--4.png" class="editButton1" width= "15px"; height= "auto";>
   </h3>
-  <p id="Bio1">Insert information about yourself here.(Max. 280 Characters)   <img id="Bio1Pic" onclick="startConvo();" src="http://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon--4.png" width= "15px"; height= "auto"></p>
+  <p id="Bio1">Insert information about yourself here.(Max. 280 Characters)   <img id="Bio1Pic" onclick="startConvo();" src="http://www.freeiconspng.com/uploads/edit-editor-pen-pencil-write-icon--4.png" class="editButton1" width= "15px"; height= "auto"></p>
   <p id="Bio2"></p>
-    <h3>Favourites</h3>
+    <h3>Favourites  <i class="fa fa-gratipay" aria-hidden="true"></i></h3>
     <div align="center" class="row">
         <img id="topFav1" src="" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
         <img id="topFav2" src="" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
