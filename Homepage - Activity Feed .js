@@ -144,18 +144,21 @@ function myComment(number) {
        type: "POST",
        url: "comment.php",
        data:{number:count, comment:skyuser},
-       success: function(response) {
-           $('#newDiv').html(response);
-     }
-     });
+
+   }).done(function(response){
+     removeAndCreate();
      showComments(number);
+   });
 
 };
-
+function removeAndCreate() {
+  var oldDiv = document.getElementById('commentDiv');
+  document.getElementById('commentDiv').remove();
+}
 function showComments(number) {
   var count = number;
   var newDiv = document.createElement("div");
-  newDiv.innerHTML = "";
+  newDiv.id = 'commentDiv';
 
  $.ajax({
 type: "POST",
