@@ -1,9 +1,30 @@
+
+$(document).ready(function(){
+  $.ajax({
+    type: "LOAD",
+    url: "cookieCheck.php"
+
+  }).done(function(msg){
+   if (msg == "false"){
+    window.location.href =  "Homepage - Activity Feed .html";
+  }
+   });
+});
+
+
 $(document).ready(function(){
   $(".feedButton").click(function(){
       $("#feed").slideDown();
   });
 });
+function logout(){
 
+  $.ajax({
+    type: "LOAD",
+    url: "logoutbutton.php"
+});
+window.location.href = "loginButtonC.html";
+}
 function boxesDissapear(){
   document.getElementById('teamstext').style.display = "none";
   document.getElementById('F1people').style.display = "none";
@@ -89,8 +110,10 @@ function toggleOverlay(number){
       document.getElementById(videoBox).style.display = "none";
     }
 	} else {
+
 		overlay.style.display = "block";
 		document.getElementById(videoBox).style.display = "block";
+    showComments(number);
 	}
 }
 
@@ -113,12 +136,38 @@ $("div.first").click(function() {
 /*  Writing comments button */
 
 function myComment(number) {
-
+     var count = number;
      var skyuser = prompt("Write your comment here");
-     var newDiv = document.createElement("div");
-     var node = document.createTextNode(skyuser);
-     var comment = 'comments' + number;
-     newDiv.appendChild(node);
-     var element = document.getElementById(comment);
-     element.appendChild(newDiv);
+
+    alert(number);
+     $.ajax({
+       type: "POST",
+       url: "comment.php",
+       data:{number:count, comment:skyuser},
+       success: function(response) {
+           $('#newDiv').html(response);
+     }
+     });
+     showComments(number);
+
+};
+
+function showComments(number) {
+  var count = number;
+  var newDiv = document.createElement("div");
+  newDiv.innerHTML = "";
+
+ $.ajax({
+type: "POST",
+url: "showComment.php",
+data:{number:count}
+}).done(function(returned){
+
+newDiv.innerHTML = returned;
+var comment = 'comments' + number;
+var element = document.getElementById(comment);
+element.appendChild(newDiv);
+   });
+
+
 }
