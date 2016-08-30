@@ -138,8 +138,8 @@ $("div.first").click(function() {
 function myComment(number) {
      var count = number;
      var skyuser = prompt("Write your comment here");
-
-    alert(number);
+     if (skyuser.length < 60) {
+     if (skyuser != ""){
      $.ajax({
        type: "POST",
        url: "comment.php",
@@ -149,10 +149,15 @@ function myComment(number) {
      removeAndCreate();
      showComments(number);
    });
+ } else {
+   alert("Please write a comment");
+ }
+ } else {
+   alert("This comments is too long");
+ }
 
 };
 function removeAndCreate() {
-  var oldDiv = document.getElementById('commentDiv');
   document.getElementById('commentDiv').remove();
 }
 function showComments(number) {
@@ -171,6 +176,4 @@ var comment = 'comments' + number;
 var element = document.getElementById(comment);
 element.appendChild(newDiv);
    });
-
-
 }
