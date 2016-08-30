@@ -6,7 +6,7 @@ $(document).ready(function(){
 
   }).done(function(msg){
    if (msg == "false"){
-    window.location.href =  "Homepage - Activity Feed .html";
+    window.location.href =  "loginButtonC.html";
   }
    });
 });
@@ -18,7 +18,7 @@ $(document).ready(function(){
   });
 });
 function logout(){
-
+alert("test");
   $.ajax({
     type: "LOAD",
     url: "logoutbutton.php"
