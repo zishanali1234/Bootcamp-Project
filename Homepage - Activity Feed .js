@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   $.ajax({
     type: "LOAD",
@@ -62,10 +61,9 @@ function chosenPreferances() {
 
 function subSportChosen() {
   var sport = document.getElementById('sport').value;
+  document.getElementById('preferancesBox').style.display = 'none';
   var subSport;
   if (subSport != "") {
-
-
   switch (sport) {
     case "Football":
         subSport = document.getElementById('teamstext').value;
@@ -176,4 +174,12 @@ var comment = 'comments' + number;
 var element = document.getElementById(comment);
 element.appendChild(newDiv);
    });
+}
+
+function favourite(number) {
+  videoNumber = 'videoNumber' + number
+  var url = document.getElementById(videoNumber).src;
+  favouriteNumber = "favourite" + number;
+  document.getElementById(favourite).style.color = "#ff3333";
+  //give url to the database
 }
