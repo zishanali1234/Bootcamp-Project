@@ -178,7 +178,7 @@ img:hover::after {
     left: 0;
     overflow-x: hidden;
     transition: .7s;
-    padding-top: 10px;
+    padding-top: 0px;
     background-repeat: no-repeat;
     background: #FFFFFF;
 }
