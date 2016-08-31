@@ -20,9 +20,10 @@
     </div>
     <div id="main">
     <div class="container-fluid">
-      <span style="font-size: 25px; cursor: pointer; position: relative; top: 60px;" onclick="openNav()"><font color="#FFFFFF">&#9776;</font></span><div onclick="closeNav()"><div class="row" align="center"><h1><b><font color="#FFFFFF" face="Helvetica">Sky Sports VOD</font></b></h1></div>
+      <span id="burgerBar" style="font-size: 25px; cursor: pointer; position: relative; top: 60px;" onclick="openNav()"><font color="#FFFFFF">&#9776;</font></span><div onclick="closeNav()"><div class="row" align="center"><h1><b><font color="#FFFFFF" face="Helvetica">Sky Sports VOD</font></b></h1></div>
+
       <div id="preferancesBox">
-      <div id="createRow" class="row">
+
         <div id="allPreferances">
           <br>
           <div align="center" class="row">
@@ -101,13 +102,14 @@
 
         <div align="center">
           <br>
-            <input type="button" id="enterSubsport" class="feedButton" onclick="subSportChosen();" value="Enter"></input></div>
+<input type="button" id="enterSubsport" class="feedButton" onclick="subSportChosen(); activityFeedNameShow()" value="Enter"></input></div>
         </div>
         </div>
       </div>
-</div>
+    </div>
+  </div>
       <div class="container-fluid" id="feed">
-    <h1><font color="#FFFFFF" face="Helvetica"><b>Your Activity Feed</b></font></h1>
+    <h1 id="activityFeedTag" ><font color="#FFFFFF" face="Helvetica"><b></b></font></h1>
     <div class="row">
       <img id="bigVideo" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" src="" onmousedown="toggleOverlay(12)">
       <img id="smallVid1" class="col-xs-6 col-sm-6 col-md-3 col-lg-3" src="" onmousedown="toggleOverlay(13)">
@@ -123,52 +125,52 @@
         <hr>
         <div align="center" class="row">
           <div id="topPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-              <img src="https://i.ytimg.com/vi/s2TkckcETvQ/hqdefault.jpg?custom=true&amp;w=336&amp;h=188&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=ReTuKhMOUyrhi14AB4RZHwc4Z_4" onmousedown="toggleOverlay(0)" width="100%">
+              <img id="imgNumber0" src="https://i.ytimg.com/vi/s2TkckcETvQ/hqdefault.jpg?custom=true&amp;w=336&amp;h=188&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=ReTuKhMOUyrhi14AB4RZHwc4Z_4" onmousedown="toggleOverlay(0)" width="100%">
           </div>
           <div id="topPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-              <img src="https://i.ytimg.com/vi/adAUD_WRjfw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=dEJz1tx8f5KKWZR5MEBKkKFQ848" onmousedown="toggleOverlay(1)" width="100%">
+              <img id="imgNumber1" src="https://i.ytimg.com/vi/adAUD_WRjfw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=dEJz1tx8f5KKWZR5MEBKkKFQ848" onmousedown="toggleOverlay(1)" width="100%">
           </div>
           <div id="topPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-              <img src="https://i.ytimg.com/vi/9-gOCOu_KGU/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=DEbXkmC-w9_9NBVpUJExiZRSkQg" onmousedown="toggleOverlay(2)" width="100%">
+              <img id="imgNumber2" src="https://i.ytimg.com/vi/9-gOCOu_KGU/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=DEbXkmC-w9_9NBVpUJExiZRSkQg" onmousedown="toggleOverlay(2)" width="100%">
           </div>
           </div>
         <h3><font color="#FFFFFF" face="Helvetica">Trending  <i class="fa fa-line-chart" aria-hidden="true"></i></font></h3>
         <hr>
         <div align="center" class="row">
         <div id="middleTopPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-          <img src="https://i.ytimg.com/vi/7nF0STpUEzs/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=uENj2LeJpE_eFRLj40yTBmtnvko" onmousedown="toggleOverlay(3)" width="100%">
+          <img id="imgNumber3" src="https://i.ytimg.com/vi/7nF0STpUEzs/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=uENj2LeJpE_eFRLj40yTBmtnvko" onmousedown="toggleOverlay(3)" width="100%">
         </div>
           <div id="middleTopPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-              <img src="https://i.ytimg.com/vi/e3z4qrlQTZQ/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=brWwkg-WvAPEiKLlQEiIcixL3Jk" onmousedown="toggleOverlay(4)" width="100%">
+              <img id="imgNumber4" src="http://e1.365dm.com/16/02/16-9/20/premier-league-logo-pl_3413062.jpg?20160209093334" onmousedown="toggleOverlay(4)" width="100%">
           </div>
           <div id="middleTopPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-            <img src="https://i.ytimg.com/vi/iMbwSnxhDOc/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=OHy-gss206EmydGsR9XiSA7OK0s " onmousedown="toggleOverlay(5)" width="100%">
+            <img id="imgNumber5" src="https://i.ytimg.com/vi/iMbwSnxhDOc/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=OHy-gss206EmydGsR9XiSA7OK0s " onmousedown="toggleOverlay(5)" width="100%">
           </div>
         </div>
         <h3><font color="#FFFFFF" face="Helvetica">Football  <i class="fa fa-futbol-o" aria-hidden="true"></i></font></h3>
           <hr>
           <div align="center" class="row">
             <div id="middleBottomPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                  <img src="https://i.ytimg.com/vi/2XMUSogvylw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_hYM_wESQqduLAFPuR3kKuy0YwE" onmousedown="toggleOverlay(6)" width="100%">
+                  <img id="imgNumber6" src="https://i.ytimg.com/vi/2XMUSogvylw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_hYM_wESQqduLAFPuR3kKuy0YwE" onmousedown="toggleOverlay(6)" width="100%">
             </div>
             <div id="middleBottomPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                <img src="http://e1.365dm.com/15/10/768x432/joe-hart-david-de-gea-manchester-city-manchester-united-premier-league_3368626.jpg?20151025171545" onmousedown="toggleOverlay(7)" width="100%" height="auto">
+                <img id="imgNumber7" src="http://e1.365dm.com/15/10/768x432/joe-hart-david-de-gea-manchester-city-manchester-united-premier-league_3368626.jpg?20151025171545" onmousedown="toggleOverlay(7)" width="100%" height="auto">
             </div>
             <div id="middleBottomPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                <img src="https://i.ytimg.com/vi/3SmICSxMfj0/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3nvFCAq-Qu7VHG2ilKvQnU9Yw-w" onmousedown="toggleOverlay(8)" width="100%">
+                <img id="imgNumber8" src="https://i.ytimg.com/vi/3SmICSxMfj0/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3nvFCAq-Qu7VHG2ilKvQnU9Yw-w" onmousedown="toggleOverlay(8)" width="100%">
             </div>
           </div>
         <h3><font color="#FFFFFF" face="Helvetica">Boxing  <i class="fa fa-hand-rock-o" aria-hidden="true"></i></font></h3>
         <hr>
         <div align="center" class="row">
           <div id="bottomPopular1" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-              <img src="https://i.ytimg.com/vi/_dnzFi_vmcw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y9QK71UPWtj9qOAnT-dAqSqLqvo" onmousedown="toggleOverlay(9)" width="100%">
+              <img id="imgNumber9" src="https://i.ytimg.com/vi/_dnzFi_vmcw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Y9QK71UPWtj9qOAnT-dAqSqLqvo" onmousedown="toggleOverlay(9)" width="100%">
           </div>
           <div id="bottomPopular2" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-              <img src="https://i.ytimg.com/vi/llnk5030XIY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=0tnp1mVMsuVNtnfmSllDjzeZt_A" onmousedown="toggleOverlay(10)" width="100%">
+              <img id="imgNumber10" src="https://i.ytimg.com/vi/llnk5030XIY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=0tnp1mVMsuVNtnfmSllDjzeZt_A" onmousedown="toggleOverlay(10)" width="100%">
           </div>
           <div id="bottomPopular3" class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-              <img src="https://i.ytimg.com/vi/LqO72oUnCks/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=vihDYADMwPh-MNx1lOL8fg0YzbQ" onmousedown="toggleOverlay(11)" width="100%">
+              <img id="imgNumber11" src="https://i.ytimg.com/vi/LqO72oUnCks/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=vihDYADMwPh-MNx1lOL8fg0YzbQ" onmousedown="toggleOverlay(11)" width="100%">
           </div>
         </div>
       </div>
@@ -186,6 +188,7 @@
  <h2><i id="favourite0" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(0)" height="50px" width="50px"></i></h2>
 </div>
 </div>
+
 <div id="videoBox1" style="margin-right: 20px; padding-left: 60px">
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
  <iframe id="videoNumber1" width="460" height="315" src="https://www.youtube.com/embed/S-RIbKiEjVg" frameborder="0" allowfullscreen></iframe>
@@ -195,8 +198,10 @@
 <form class="container" id="comments1" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(1)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite1" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(1)" height="50px" width="50px"></i></h2>
 </div>
 </div>
+
 <div id="videoBox2" style="margin-right: 20px; padding-left: 60px">
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
  <iframe id="videoNumber2" width="460" height="315" src="https://www.youtube.com/embed/9-gOCOu_KGU" frameborder="0" allowfullscreen></iframe>
@@ -206,8 +211,10 @@
 <form class="container" id="comments2" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(2)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite2" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(2)" height="50px" width="50px"></i></h2>
 </div>
 </div>
+
 <div id="videoBox3" style="margin-right: 20px; padding-left: 60px">
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
  <iframe id="videoNumber3" width="460" height="315" src="https://www.youtube.com/embed/tKi29fb_c9A" frameborder="0" allowfullscreen></iframe>
@@ -217,17 +224,19 @@
 <form class="container" id="comments3" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(3)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite3" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(3)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox4" style="margin-right: 20px; padding-left: 60px">
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
- <iframe id="videoNumber4" width="460" height="315" src="https://www.youtube.com/embed/aUDLB4TCGbE" frameborder="0" allowfullscreen></iframe>
+ <iframe id="videoNumber4" width="460" height="315" src="https://www.youtube.com/embed/inqtI6qEy9Q" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-xs-7 col-sm-4 col-md-6 col-lg-6" id="commentsbig">
 <div class="first"><button id="commentExpand"><font color="#4a4a4a"><p><b>COMMENTS</b></p></font></button></div>
 <form class="container" id="comments4" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(4)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite4" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(4)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox5" style="margin-right: 20px; padding-left: 60px">
@@ -239,6 +248,7 @@
 <form class="container" id="comments5" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(5)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite5" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(5)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox6" style="margin-right: 20px; padding-left: 60px">
@@ -250,6 +260,7 @@
 <form class="container" id="comments6" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(6)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite6" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(6)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox7" style="margin-right: 20px; padding-left: 60px">
@@ -261,6 +272,7 @@
 <form class="container" id="comments7" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(7)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite7" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(7)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox8" style="margin-right: 20px; padding-left: 60px">
@@ -272,6 +284,7 @@
 <form class="container" id="comments8" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(8)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite8" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(8)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox9" style="margin-right: 20px; padding-left: 60px">
@@ -283,6 +296,7 @@
 <form class="container" id="comments9" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(9)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite9" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(9)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox10" style="margin-right: 20px; padding-left: 60px">
@@ -294,6 +308,7 @@
 <form class="container" id="comments10" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(10)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite10" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(10)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox11" style="margin-right: 20px; padding-left: 60px">
@@ -305,6 +320,7 @@
 <form class="container" id="comments11" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(11)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite11" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(11)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox12" style="margin-right: 20px; padding-left: 60px">
@@ -316,6 +332,7 @@
 <form class="container" id="comments12" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(12)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite12" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(12)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox13" style="margin-right: 20px; padding-left: 60px">
@@ -327,6 +344,7 @@
 <form class="container" id="comments13" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(13)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite13" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(13)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox14" style="margin-right: 20px; padding-left: 60px">
@@ -338,6 +356,7 @@
 <form class="container" id="comments14" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(14)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite14" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(14)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 <div id="videoBox15" style="margin-right: 20px; padding-left: 60px">
@@ -349,6 +368,7 @@
 <form class="container" id="comments15" style="height: 100px; overflow-y: scroll"><p align="center">Write your comments below</p>
 </form>
 <button id="writeComment" onclick="myComment(15)"><font><p><b>WRITE A COMMENT</b></p></font></button>
+<h2><i id="favourite15" class="fa fa-gratipay" aria-hidden="true" onclick="favourite(15)" height="50px" width="50px"></i></h2>
 </div>
 </div>
 

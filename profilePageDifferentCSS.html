@@ -10,14 +10,14 @@
   <script src="https://use.fontawesome.com/2649ac17d9.js"></script>
 </head>
 
-<body onload="changeImage()">
+<body>
   <div id="mySidebar" class="sidebar">
     <button style="background-color: #0B0B61; width: 100%"><font face="Helvetica" color="#FFFFFF"><b>SKY SPORTS VOD &nbsp</b><i style="background-color: #0B0B61" onclick="closeNav()" class="fa fa-times" aria-hidden="true"></i></button></font>
     <a href="Homepage - Activity Feed .html"><button style="width: 100%; height: 60px;"><font face="Helvetica">Home</font></button></a>
     <br>
     <a href="profilePageDifferentCSS.html"><button style="width: 100%; height: 60px;"><font face="Helvetica">My Profile</font></button></a>
     <br>
-    <a href="#"><button style="width: 100%; height: 60px; position: absolute; bottom: 0%"><font face="Helvetica">Log Out</font></button></a>
+    <a href="#"><button style="width: 100%; height: 30px; position: absolute; bottom: 0%"><font face="Helvetica">Log Out</font></button></a>
   </div>
 <div id="main">
 <div class="container-fluid">
@@ -33,28 +33,80 @@
     <h3>Favourites  <i class="fa fa-gratipay" aria-hidden="true"></i></h3>
     <hr>
     <div align="center" class="row" style="padding-left: 20px; padding-right: 20px;">
-        <img id="topFav1" src="#" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-        <img id="topFav2" src="#" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-        <img id="topFav3" src="#" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <img id="Fav0" src="" onclick="toggleOverlay(0);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav1" src="" onclick="toggleOverlay(1);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav2" src="" onclick="toggleOverlay(2);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
     </div>
     <div align="center" class="row" style="padding-left: 20px; padding-right: 20px;">
-        <img id="middleFav1" id="" onclick="videoBOxAppearFuntion();" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
-        <img id="middleFav2" id="" onclick="videoBOxAppearFuntion();" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
-        <img id="middleFav3" id="" onclick="videoBOxAppearFuntion();" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav3" src="" onclick="toggleOverlay(3);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav4" src="" onclick="toggleOverlay(4);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav5" src="" onclick="toggleOverlay(5);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
     </div>
     <div align="center" class="row" style="padding-left: 20px; padding-right: 20px;">
-        <img id="bottomFav1" id="" onclick="videoBOxAppearFuntion();" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
-        <img id="bottomFav2" id="" onclick="videoBOxAppearFuntion();" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
-        <img id="bottomFav3" id="" onclick="videoBOxAppearFuntion();" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav6" src="" onclick="toggleOverlay(6);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav7" src="" onclick="toggleOverlay(7);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
+        <img id="Fav8" src="" onclick="toggleOverlay(8);" class="col-xs-12 col-sm-12 col-md-3 col-lg-3"></img>
     </div>
   </div>
-
-
   </div>
 </div>
 </div>
 </div>
+<div id="overlay" onmousedown="toggleOverlay();" style="display:none;"></div>
+<div id="videoBox0" style="margin-right: 20px; padding-left: 60px; display: none">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+   <iframe id="videoNumber0" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
   </div>
+</div>
+
+<div id="videoBox1" style="margin-right: 20px; padding-left: 60px; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber1" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="videoBox2" style="margin-right: 20px; padding-left: 60px; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber2" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="videoBox3" style="margin-right: 20px; padding-left: 60px; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber3" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="videoBox4" style="margin-right: 20px; padding-left: 60px; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber4" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="videoBox5" style="margin-right: 20px; padding-left: 60px; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber5" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="videoBox6" style="margin-right: 20px; padding-left: 60px; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber6" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="videoBox7" style="margin-right: 20px; padding-left: 60px; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber7" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<div id="videoBox8" style="margin-right: 20px; padding-left: 60px; display: none; display: none">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+ <iframe id="videoNumber8" width="460px" height="315px" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
 <script src="profilePage.js"></script>
 </body>
 </html>

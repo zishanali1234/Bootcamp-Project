@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   $.ajax({
     type: "LOAD",
@@ -17,7 +18,7 @@ $(document).ready(function(){
   });
 });
 function logout(){
-alert("test");
+
   $.ajax({
     type: "LOAD",
     url: "logoutbutton.php"
@@ -61,9 +62,10 @@ function chosenPreferances() {
 
 function subSportChosen() {
   var sport = document.getElementById('sport').value;
-  document.getElementById('preferancesBox').style.display = 'none';
   var subSport;
   if (subSport != "") {
+
+
   switch (sport) {
     case "Football":
         subSport = document.getElementById('teamstext').value;
@@ -84,6 +86,7 @@ function subSportChosen() {
         subSport = document.getElementById('nationalities').value;
         break;
   }
+  document.getElementById("preferancesBox").style.display = "none"
 } else {
   window.alert("please enter a sub sport");
 }
@@ -106,11 +109,16 @@ function toggleOverlay(number){
 		for (i=0; i<=16; i++){
       videoBox = "videoBox" + i;
       document.getElementById(videoBox).style.display = "none";
+      commentContent = document.getElementById('commentDiv').innerHTML;
+      if (commentContent != ""){
+      removeAndCreate();
+    }
     }
 	} else {
 
 		overlay.style.display = "block";
 		document.getElementById(videoBox).style.display = "block";
+    //removeAndCreate();
     showComments(number);
 	}
 }
@@ -118,11 +126,13 @@ function toggleOverlay(number){
 function openNav() {
     document.getElementById("mySidebar").style.width = "25%";
     document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("burgerBar").style.display = "none";
 }
 
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
+    document.getElementById('burgerBar').style.display = "block";
 }
 
 /* Comment expand button jquery here  */
@@ -144,7 +154,7 @@ function myComment(number) {
        data:{number:count, comment:skyuser},
 
    }).done(function(response){
-     removeAndCreate();
+     //removeAndCreate();
      showComments(number);
    });
  } else {
@@ -176,10 +186,30 @@ element.appendChild(newDiv);
    });
 }
 
+function activityFeedNameShow() {
+  $.ajax({
+    type: "LOAD",
+    url: "checkForSession.php"
+  }).done(function(returned) {
+    var name = returned;
+    var textInACF = "Hello, " + name + ". This is your activity feed";
+    document.getElementById("activityFeedTag").innerHTML = textInACF;
+  })
+}
+
 function favourite(number) {
-  videoNumber = 'videoNumber' + number
+  var videoNumber = 'videoNumber' + number;
+  var imgNumber = "imgNumber" + number;
   var url = document.getElementById(videoNumber).src;
-  favouriteNumber = "favourite" + number;
-  document.getElementById(favourite).style.color = "#ff3333";
-  //give url to the database
+  var imgSrc = document.getElementById(imgNumber).src;
+  var favouriteNumber = "favourite" + number;
+
+  document.getElementById(favouriteNumber).style.color = "#ff3333";
+  $.ajax({
+    type: "POST",
+    url: "addFavourite.php",
+    data: {embedCode: url, image:imgSrc}
+  });
+
+
 }

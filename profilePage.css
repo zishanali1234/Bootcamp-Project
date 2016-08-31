@@ -3,7 +3,7 @@ p {
 }
 
 body {
-   height: auto;
+   height: 1000px;
    margin: 0 auto;
    background-repeat: no-repeat;
    background: -webkit-linear-gradient(top, #0B0B61, #2E64FE);
@@ -171,4 +171,30 @@ body {
 
 .editButton1 {
   -webkit-filter: invert(100%);
+}
+
+#overlay {
+    display: none;
+    z-index: 2;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+
+#videoBox0, #videoBox1, #videoBox2, #videoBox3, #videoBox4, #videoBox5, #videoBox6, #videoBox7, #videoBox8, #videoBox9, #videoBox10, #videoBox11, #videoBox12, #videoBox13, #videoBox14, #videoBox15 {
+ display: none;
+ height: auto;
+ width: 1000px;
+ position: fixed;
+ top: 45%;
+ left: 49%;
+ right: 29%;
+ margin-top: -100px;
+ margin-left: -230px;
+ z-index: 9999;
+ margin-right: 50px;
 }
