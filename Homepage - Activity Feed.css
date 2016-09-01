@@ -178,7 +178,7 @@ img:hover::after {
     left: 0;
     overflow-x: hidden;
     transition: .7s;
-    padding-top: 10px;
+    padding-top: 0px;
     background-repeat: no-repeat;
     background: #FFFFFF;
 }
@@ -212,15 +212,13 @@ img:hover::after {
 #videoBox0, #videoBox1, #videoBox2, #videoBox3, #videoBox4, #videoBox5, #videoBox6, #videoBox7, #videoBox8, #videoBox9, #videoBox10, #videoBox11, #videoBox12, #videoBox13, #videoBox14, #videoBox15 {
  display: none;
  height: auto;
- width: 1000px;
+ width: 100%;
  position: fixed;
- top: 45%;
- left: 29%;
- right: 29%;
+ top: 35%;
+ left: 0;
+ right: 0;
  margin-top: -100px;
- margin-left: -230px;
  z-index: 9999;
- margin-right: 50px;
 }
 
 /* Comments section CSS */

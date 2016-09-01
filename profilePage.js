@@ -172,11 +172,13 @@ function changeheading() {
 function openNav() {
     document.getElementById("mySidebar").style.width = "25%";
     document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("burgerBar").style.display = "none";
 }
 
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
+    document.getElementById('burgerBar').style.display = "inline";
 }
 
 

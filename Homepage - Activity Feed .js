@@ -109,8 +109,7 @@ function toggleOverlay(number){
 		for (i=0; i<=16; i++){
       videoBox = "videoBox" + i;
       document.getElementById(videoBox).style.display = "none";
-      commentContent = document.getElementById('commentDiv').innerHTML;
-      if (commentContent != ""){
+      if (document.getElementById('commentDiv').innerHTML != ""){
       removeAndCreate();
     }
     }
@@ -132,7 +131,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
-    document.getElementById('burgerBar').style.display = "block";
+    document.getElementById('burgerBar').style.display = "inline";
 }
 
 /* Comment expand button jquery here  */
